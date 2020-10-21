@@ -275,7 +275,7 @@ bot.on("message", async (message) => { // eslint-disable-line
                         .setColor("BLUE")
                         .setAuthor("Search results", message.author.displayAvatarURL())
                         .setDescription(`${videos.map(video2 => `**\`${++index}\`  |**  ${video2.title}`).join("\n")}`)
-                        .setFooter("Please choose one of the following 10 results, this embed will auto-deleted in 15 seconds");
+                        .setFooter("Please choose one of the following 10 results, this embed will auto-deleted in 60 seconds");
                     // eslint-disable-next-line max-depth
                     message.channel.send(embedPlay).then(m => m.delete({
                         timeout: 60000
