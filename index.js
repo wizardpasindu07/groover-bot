@@ -278,12 +278,12 @@ bot.on("message", async (message) => { // eslint-disable-line
                         .setFooter("Please choose one of the following 10 results, this embed will auto-deleted in 15 seconds");
                     // eslint-disable-next-line max-depth
                     message.channel.send(embedPlay).then(m => m.delete({
-                        timeout: 15000
+                        timeout: 60000
                     }))
                     try {
                         var response = await message.channel.awaitMessages(message2 => message2.content > 0 && message2.content < 11, {
                             max: 1,
-                            time: 15000,
+                            time: 60000,
                             errors: ["time"]
                         });
                     } catch (err) {
