@@ -586,7 +586,7 @@ function play(guild, song) {
     serverQueue.textChannel.send({
         embed: {
             color: "BLUE",
-            description: `**music.gif** | **💯** | ** Joined To **\`${serverQueue.voiceChannel}\`. **🎶  **|**  Start Playing Song: ** \`${song.title}\``
+            description: `**"https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/Music.gif"** | **💯** | ** Joined To **\`${serverQueue.voiceChannel}\`. **🎶  **|**  Start Playing Song: ** \`${song.title}\``
         }
     });
 }
