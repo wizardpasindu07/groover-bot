@@ -352,7 +352,9 @@ bot.on("message", async (message) => { // eslint-disable-line
                 color: "GREEN",
                 description: "⏹️  **|**  Deleting queues and leaving voice channel..."
             }
-           
+            react: {
+                message.react('👋');
+            }
         });
 
     } else if (command === "volume" || command === "vol") {
