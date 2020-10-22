@@ -163,7 +163,7 @@ bot.on("message", async (message) => { // eslint-disable-line
             return message.channel.send({
                 embed: {
                     color: "RED",
-                    description: "Sorry, but I need a **`CONNECT`** permission to proceed!"
+                    description: "Sorry, but I need **`CONNECT`** permission to proceed!"
                 }
             });
         }
@@ -171,7 +171,7 @@ bot.on("message", async (message) => { // eslint-disable-line
             return message.channel.send({
                 embed: {
                     color: "RED",
-                    description: "Sorry, but I need a **`SPEAK`** permission to proceed!"
+                    description: "Sorry, but I need **`SPEAK`** permission to proceed!"
                 }
             });
         }
@@ -204,7 +204,7 @@ bot.on("message", async (message) => { // eslint-disable-line
                     if (!video) return message.channel.send({
                         embed: {
                             color: "RED",
-                            description: "🆘  **|**  I could not obtain any search results"
+                            description: "❌  **|**  I could not find any search results, Please try another kerword"
                         }
                     });
                 } catch (err) {
@@ -212,7 +212,7 @@ bot.on("message", async (message) => { // eslint-disable-line
                     return message.channel.send({
                         embed: {
                             color: "RED",
-                            description: "🆘  **|**  I could not obtain any search results"
+                            description: "❌  **|**  I could not find any search results, Please try another kerword"
                         }
                     });
                 }
@@ -233,7 +233,7 @@ bot.on("message", async (message) => { // eslint-disable-line
             return message.channel.send({
                 embed: {
                     color: "RED",
-                    description: "Sorry, but I need a **`CONNECT`** permission to proceed!"
+                    description: "Sorry, but I need **`CONNECT`** permission to proceed!"
                 }
             });
         }
@@ -241,14 +241,14 @@ bot.on("message", async (message) => { // eslint-disable-line
             return message.channel.send({
                 embed: {
                     color: "RED",
-                    description: "Sorry, but I need a **`SPEAK`** permission to proceed!"
+                    description: "Sorry, but I need **`SPEAK`** permission to proceed!"
                 }
             });
         }
         if (!url || !searchString) return message.channel.send({
             embed: {
                 color: "RED",
-                description: "Please input link/title to search music"
+                description: "Please input URL/title to search music"
             }
         });
         if (url.match(/^https?:\/\/(www.youtube.com|youtube.com)\/playlist(.*)$/)) {
@@ -291,7 +291,7 @@ bot.on("message", async (message) => { // eslint-disable-line
                         return message.channel.send({
                             embed: {
                                 color: "RED",
-                                description: "The song selection time has expired in 15 seconds, the request has been canceled."
+                                description: "The song selection time has expired in 60 seconds, the request has been canceled."
                             }
                         });
                     }
@@ -302,7 +302,7 @@ bot.on("message", async (message) => { // eslint-disable-line
                     return message.channel.send({
                         embed: {
                             color: "RED",
-                            description: "🆘  **|**  I could not obtain any search results"
+                            description: "❌  **|**  I could not find any search results, Please Try Another Keyword"
                         }
                     });
                 }
@@ -328,7 +328,7 @@ bot.on("message", async (message) => { // eslint-disable-line
         return message.channel.send({
             embed: {
                 color: "GREEN",
-                description: "⏭️  **|**  I skipped the song for you"
+                description: "⏭️  **|**  I skipped the song for you and starting playing next song"
             }
         });
 
@@ -586,7 +586,7 @@ function play(guild, song) {
     serverQueue.textChannel.send({
         embed: {
             color: "BLUE",
-            description: `**💯** | ** Joined To **\`${serverQueue.voiceChannel}\`. **🎶  **|**  Start Playing: ** \`${song.title}\``
+            description: `**🆗****💯** | ** Joined To **\`${serverQueue.voiceChannel}\`. **🎶  **|**  Start Playing: ** \`${song.title}\``
         }
     });
 }
