@@ -348,7 +348,6 @@ bot.on("message", async (message) => { // eslint-disable-line
         serverQueue.songs = [];
         serverQueue.connection.dispatcher.end("[runCmd] Stop command has been used");
         return message.channel.send({
-        message.react:":wave:"
             embed: {
                 color: "GREEN",
                 description: "⏹️  **|**  Deleting queues and leaving voice channel..."
