@@ -38,7 +38,7 @@ bot.on("message", async (message) => { // eslint-disable-line
             .setColor("GREEN")
             .setAuthor(bot.user.tag, bot.user.displayAvatarURL())
             .setDescription(`__**Command list**__\n> \`!play/!p\` > **\`play [title OR url]\`**\n> \`!search\` > **\`search [title of the song]\`**\n> \`!skip\`, \`!stop\`,  \`!pause\`, \`!resume\`\n> \`!nowplaying/!np\`, \`!queue\`, \`!volume\`, \`!invite/!i\`\n> \`=>>If You Want To Learn More About Each Command Simply Type Command Name And Help Ex:'!playhelp'\``)
-            .setFooter("©️ 2020 Made By Pasindu And His Team", "https://pasindudushn.github.io/GROOVER/");
+            .setFooter("©️ 2020 Made By Pasindu And His Team");
         message.channel.send(helpembed);
     }
     if(command === "invite" || command === "i"){
