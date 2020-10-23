@@ -37,7 +37,7 @@ bot.on("message", async (message) => { // eslint-disable-line
         const helpembed = new MessageEmbed()
             .setColor("YELLOW")
             .setAuthor(bot.user.tag, bot.user.displayAvatarURL())
-            .setDescription(`__**Command list for the Groover bot**__\n> \`!play/!p\` > **\`play [title OR url]\`**\n> \`!search\` > **\`search [title of the song]\`**\n> \`!skip\`, \`!stop\`,  \`!pause\`, \`!resume\`\n> \`!nowplaying/!np\`, \`!queue\`, \`!volume\`, \`!invite/!i\`\n> \`=>>If You Want To Learn More About Each Command Simply Type Command Name And Help Ex:'!playhelp'\``)
+            .setDescription(`__**Command list for the Groover bot**__\n> \`g!play / g!p\` > **\`play [title OR url]\`**\n> \`g!search\` > **\`search [title of the song]\`**\n> \`g!skip\`, \`g!stop\`,  \`g!pause\`, \`g!resume\`\n> \`g!nowplaying / g!np\`, \`g!queue\`, \`g!volume\`, \`g!invite / g!i\`\n> \`=>>If You Want To Learn More About Each Command Simply Type Command Name And Help Ex:'g!playhelp'\``)
             .setFooter("©️ 2020 Made By Pasindu And His Team");
         message.channel.send(helpembed);
     }
