@@ -155,7 +155,7 @@ bot.on("message", async (message) => { // eslint-disable-line
         if (!voiceChannel) return message.channel.send({
             embed: {
                 color: "RED",
-                description: "✖️ I'm sorry, but you need to be in a voice channel to play a music!"
+                description: "❌ I'm sorry, but you need to be in a voice channel to play a music!"
             }
         });
         const permissions = voiceChannel.permissionsFor(message.client.user);
@@ -163,7 +163,7 @@ bot.on("message", async (message) => { // eslint-disable-line
             return message.channel.send({
                 embed: {
                     color: "RED",
-                    description: "✖️ Sorry, but I need **`CONNECT`** permission to proceed!"
+                    description: "❌ Sorry, but I need **`CONNECT`** permission to proceed!"
                 }
             });
         }
@@ -171,7 +171,7 @@ bot.on("message", async (message) => { // eslint-disable-line
             return message.channel.send({
                 embed: {
                     color: "RED",
-                    description: "✖️ Sorry, but I need **`SPEAK`** permission to proceed!"
+                    description: "❌ Sorry, but I need **`SPEAK`** permission to proceed!"
                 }
             });
         }
@@ -225,7 +225,7 @@ bot.on("message", async (message) => { // eslint-disable-line
         if (!voiceChannel) return message.channel.send({
             embed: {
                 color: "RED",
-                description: "✖️ I'm sorry, but you need to be in a voice channel to play a music!"
+                description: "❌ I'm sorry, but you need to be in a voice channel to play a music!"
             }
         });
         const permissions = voiceChannel.permissionsFor(message.client.user);
@@ -233,7 +233,7 @@ bot.on("message", async (message) => { // eslint-disable-line
             return message.channel.send({
                 embed: {
                     color: "RED",
-                    description: "✖️ Sorry, but I need **`CONNECT`** permission to proceed!"
+                    description: "❌ Sorry, but I need **`CONNECT`** permission to proceed!"
                 }
             });
         }
@@ -241,7 +241,7 @@ bot.on("message", async (message) => { // eslint-disable-line
             return message.channel.send({
                 embed: {
                     color: "RED",
-                    description: "✖️ Sorry, but I need **`SPEAK`** permission to proceed!"
+                    description: "❌ Sorry, but I need **`SPEAK`** permission to proceed!"
                 }
             });
         }
@@ -315,13 +315,13 @@ bot.on("message", async (message) => { // eslint-disable-line
         if (!message.member.voice.channel) return message.channel.send({
             embed: {
                 color: "RED",
-                description: "✖️ I'm sorry, but you need to be in a voice channel to skip a music!"
+                description: "❌ I'm sorry, but you need to be in a voice channel to skip a music!"
             }
         });
         if (!serverQueue) return message.channel.send({
             embed: {
                 color: "RED",
-                description: "✖️ There is nothing playing that I could skip for you"
+                description: "❌ There is nothing playing that I could skip for you"
             }
         });
         serverQueue.connection.dispatcher.end("[runCmd] Skip command has been used");
@@ -336,13 +336,13 @@ bot.on("message", async (message) => { // eslint-disable-line
         if (!message.member.voice.channel) return message.channel.send({
             embed: {
                 color: "RED",
-                description: "✖️ I'm sorry but you need to be in a voice channel to play music!"
+                description: "❌ I'm sorry but you need to be in a voice channel to play music!"
             }
         });
         if (!serverQueue) return message.channel.send({
             embed: {
                 color: "RED",
-                description: "✖️ There is nothing playing that I could stop for you"
+                description: "❌ There is nothing playing that I could stop for you"
             }
         });
         serverQueue.songs = [];
@@ -359,13 +359,13 @@ bot.on("message", async (message) => { // eslint-disable-line
         if (!message.member.voice.channel) return message.channel.send({
             embed: {
                 color: "RED",
-                description: "✖️ I'm sorry, but you need to be in a voice channel to set a volume!"
+                description: "❌ I'm sorry, but you need to be in a voice channel to set a volume!"
             }
         });
         if (!serverQueue) return message.channel.send({
             embed: {
                 color: "RED",
-                description: "✖️ There is nothing playing"
+                description: "❌ There is nothing playing"
             }
         });
         if (!args[1]) return message.channel.send({
@@ -377,7 +377,7 @@ bot.on("message", async (message) => { // eslint-disable-line
         if (isNaN(args[1]) || args[1] > 100) return message.channel.send({
             embed: {
                 color: "RED",
-                description: "✖️ Volume only can be set in a range of **\`1\`** - **\`100\`**"
+                description: "❌ Volume only can be set in a range of **\`1\`** - **\`100\`**"
             }
         });
         serverQueue.volume = args[1];
@@ -416,7 +416,7 @@ bot.on("message", async (message) => { // eslint-disable-line
         if (!serverQueue) return message.channel.send({
             embed: {
                 color: "RED",
-                description: "✖️ There is nothing playing"
+                description: "❌ There is nothing playing"
             }
         });
         let embedQueue = new MessageEmbed()
