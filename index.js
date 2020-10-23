@@ -346,7 +346,6 @@ bot.on("message", async (message) => { // eslint-disable-line
             }
         });
         serverQueue.songs = [];
-        await.m.react("👋");
         serverQueue.connection.dispatcher.end("[runCmd] Stop command has been used");
         return message.channel.send({
             embed: {
