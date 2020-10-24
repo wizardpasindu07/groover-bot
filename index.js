@@ -155,7 +155,7 @@ bot.on("message", async (message) => { // eslint-disable-line
         if (!voiceChannel) return message.channel.send({
             embed: {
                 color: "RED",
-                description: "❌ I'm sorry, but you need to be in a voice channel to play a music!"
+                description: "❌ I'm sorry, but you need to be in a voice channel to play music!"
             }
         });
         const permissions = voiceChannel.permissionsFor(message.client.user);
@@ -225,7 +225,7 @@ bot.on("message", async (message) => { // eslint-disable-line
         if (!voiceChannel) return message.channel.send({
             embed: {
                 color: "RED",
-                description: "❌ I'm sorry, but you need to be in a voice channel to play a music!"
+                description: "❌ I'm sorry, but you need to be in a voice channel to play music!"
             }
         });
         const permissions = voiceChannel.permissionsFor(message.client.user);
@@ -488,7 +488,7 @@ bot.on("message", async (message) => { // eslint-disable-line
         return message.channel.send({
             embed: {
                 color: "RED",
-                description: "There is nothing playing"
+                description: "There is nothing playing now"
             }
         });
     } else if (command === "loop") {
