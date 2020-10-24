@@ -55,7 +55,7 @@ bot.on("message", async (message) => { // eslint-disable-line
         if(voiceChannel) return message.channel.send({
             embed: {
                 color: "lightGreen",
-                description: "\`Type '!play Or !p' Command And Then Type The Song Name Or URL. Then The Bot Will Search If The Song Is Available, If The Song Is Available Bot Will Start Playing The Song\`"
+                description: "\`Type 'g!play Or g!p' Command And Then Type The Song Name Or URL. Then The Bot Will Search If The Song Is Available, If The Song Is Available Bot Will Start Playing The Song\`"
            }
         });
     }
@@ -64,7 +64,7 @@ bot.on("message", async (message) => { // eslint-disable-line
         if(voiceChannel) return message.channel.send({
             embed: {
                 color: "lightGreen",
-                description: "\`If A Song Is Playing At The Momemnt The Bot Will Pause That Song For You. Type '!pause' To Execute The Command\`"
+                description: "\`If A Song Is Playing At The Momemnt The Bot Will Pause That Song For You. Type 'g!pause' To Execute The Command\`"
             }
          });
     }
@@ -73,7 +73,7 @@ bot.on("message", async (message) => { // eslint-disable-line
         if(voiceChannel) return message.channel.send({
             embed: {
                 color: "lightGreen",
-                description: "\`If The Current Playing Song Is Paused The Bot Will Resume The Song Again For You. Type '!resume' To Execute The Command\`"
+                description: "\`If The Current Playing Song Is Paused The Bot Will Resume The Song Again For You. Type 'g!resume' To Execute The Command\`"
             }
         });
     }
@@ -82,7 +82,7 @@ bot.on("message", async (message) => { // eslint-disable-line
         if(voiceChannel) return message.channel.send({
             embed: {
                 color: "lightGreen",
-                description: "\`If There Is A Song In The Queue The Bot Will Skip The Song And Start Playing Next Song In The Queue. Type '!skip' To Execute The Command\`"
+                description: "\`If There Is A Song In The Queue The Bot Will Skip The Song And Start Playing Next Song In The Queue. Type 'g!skip' To Execute The Command\`"
             }
         });
     }
@@ -91,7 +91,7 @@ bot.on("message", async (message) => { // eslint-disable-line
        if(voiceChannel) return message.channel.send({
            embed: {
                color: "lightGreen",
-               description: "\`If You Have Another Song Added To The Queue Only Then The Bot Will Show You The Song Queue. Type '!queue' To Execute The Command\`"
+               description: "\`If You Have Another Song Added To The Queue Only Then The Bot Will Show You The Song Queue. Type 'g!queue' To Execute The Command\`"
             }
        });
     }
@@ -100,7 +100,7 @@ bot.on("message", async (message) => { // eslint-disable-line
        if(voiceChannel) return message.channel.send({
            embed: {
                color: "lightGreen",
-               description: "\`If There Is A Song Playing Current Time The Bot Will Stop The Song And Leave The Voice Channel. Type '!stop' To Stop The Song\`"
+               description: "\`If There Is A Song Playing Current Time The Bot Will Stop The Song And Leave The Voice Channel. Type 'g!stop' To Stop The Song\`"
             }
        });
     }
@@ -109,7 +109,7 @@ bot.on("message", async (message) => { // eslint-disable-line
        if(voiceChannel) return message.channel.send({
            embed: {
                color: "lightGreen",
-               description: "\`If You Type '!search <song name or URL' The Bot Will Search The Whole Youtube And Give You The Song Results That Are Match With The Song Name Or URL You Typed\`"
+               description: "\`If You Type 'g!search or g!sc <song name or URL>' The Bot Will Search The Whole Youtube And Give You The Song Results That Are Match With The Song Name Or URL You Typed\`"
               }
        });
     }
@@ -118,7 +118,7 @@ bot.on("message", async (message) => { // eslint-disable-line
         if(voiceChannel) return message.channel.send({
             embed:{
                 color: "lightGreen",
-                description: "\`If A Song Is Playing At The Current Time The Bot Will Show The Name Of The Song That Playing Song. Just Type '!nowplaying' Or '!np' To Execute The Command\`"
+                description: "\`If A Song Is Playing At The Current Time The Bot Will Show The Name Of The Song That Playing Song. Just Type 'g!nowplaying' Or '!np' To Execute The Command\`"
                }                                               
          });
     }
@@ -127,7 +127,7 @@ bot.on("message", async (message) => { // eslint-disable-line
         if(voiceChannel) return message.channel.send({
             embed: {
                 color: "lightGreen",
-                description: "\`The Bot Will Increase Or Decrease The Volume Of The Song. Just Type '!volume <volume you need>' Or Just Type '!volume' To Know The Current Volume That You Are Hearing\`"
+                description: "\`The Bot Will Increase Or Decrease The Volume Of The Song. Just Type 'g!volume <volume you need>' Or Just Type 'g!volume' To Know The Current Volume That You Are Hearing\`"
                 }
         });
     }
@@ -136,7 +136,7 @@ bot.on("message", async (message) => { // eslint-disable-line
         if(voiceChannel) return message.channel.send({
             embed: {
                 color: "lightGreen",
-                description: "\`You Can Invite This Bot To Your Server As Well. Type '!invite' To Execute The Command And Click On The Link To Invite This Bot To Your Serevr\`"
+                description: "\`You Can Invite This Bot To Your Server As Well. Type 'g!invite' To Execute The Command And Click On The Link To Invite This Bot To Your Serevr\`"
     }
            });
     }
@@ -587,7 +587,7 @@ function play(guild, song) {
     serverQueue.textChannel.send({
         embed: {
             color: "BLUE",
-            description: `**YouTube Search Found!.** | **💯** | ** Joined To **\`${serverQueue.voiceChannel}\` **🎶  **|** Song Name: ** \`${song.title}\``
+            description: `**YouTube Search Found!.**\n>  **💯** | ** Joined To **\`${serverQueue.voiceChannel}\`\n> **🎶  **|** Song Name: ** \`${song.title}\``
         }
     });
 }
