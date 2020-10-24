@@ -587,7 +587,7 @@ function play(guild, song) {
     serverQueue.textChannel.send({
         embed: {
             color: "BLUE",
-            description: `**YouTube Search Found!**\n> **💯** | ** Joined To **\`${serverQueue.voiceChannel}\`\n> **🎶  **|** Song Name: ** \`${song.title}\``
+            description: `**YouTube Search Found!.** | **💯** | ** Joined To **\`${serverQueue.voiceChannel}\` **🎶  **|** Song Name: ** \`${song.title}\``
         }
     });
 }
